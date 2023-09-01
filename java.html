@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website by Satkar Singh</title>
+  </head>
+  <body>
+    <h1>A very hearty congratulations to the birthday boy</h1>
+    <h2>for completing one wonderful year <b><i></h2>
+    <h3>Below is the image of the gift<i> </h3>
+    <img src = mustang.jpg>
+    <br />
+    <script>
+      //using methods pf string usage
+      let line = "CELEBRATE AND ENJOY";
+
+      //appearing the length of string 
+      console.log("length of the string: " + line.length);
+      ("<br>");
+
+      // displaying string to uppercase
+      console.log("line to uppercase: " + line.toUpperCase());
+
+      //replace the text in the sentence
+      console.log(
+        "replace 'victory' to 'independent': " + line.replace("victory", "independent")
+      );
+
+      //Using method of Charart
+      console.log("Character at index 12:", myString.charAt(12));
+
+      //Repeating up the same line
+      console.log("Repeated:", myString.repeat(2));
+
+      ("<br>");
+
+      //using method of number
+      const anyinteger = 140;
+
+      //formating number with specified palace
+      console.log("toFixed:", anyinteger.toFixed(7));
+
+      //formatting up number in exponential form
+      console.log("toExponential:", anyinteger.toExponential(5));
+
+      //checking whether the value is finite or infinite
+      console.log("isFinite:", isFinite(anyinteger));
+
+      //converting a value to a number
+      const convertedNumber = Number("120");
+      console.log("Number:", convertedNumber);
+
+      //checking if a value is NaN (Not-a-Number) or not
+      console.log("isNaN:", isNaN(anyinteger));
+
+      ("<br>");
+
+      //array method
+      const FavouriteColors = ["red", "green", "blue", "black", "white"];
+
+      //getting up the number of elements in the array
+      console.log("Length:", MyColors.length);
+
+      //adding up the elements to the end of the array
+      FavouriteColors.push("green", "blue");
+      console.log("push:", FavouriteColors);
+
+      //removing and returning the last elements of the array
+      const lastColor = FavouriteColors.pop();
+      console.log("pop:", lastColor, FavouriteColors);
+
+      //removing and returning the first elements of the array
+      const firstColor = FavouriteColors.shift();
+      console.log("shift:", firstColor, FavouriteColors);
+
+      //finding the index of an element in the array
+      const yellowIndex = FavouriteColors.indexOf("yellow");
+      console.log("indexOf 'red':", yellowIndex);
+
+      ("<br>");
+
+      // Creating a new Date object representing the current date and time
+      const Startdateofmybirthday = new Date();
+
+      //gettig current date
+      console.log("Current Date:", Startdateofnewjourney);
+
+      // getting current year
+      const year = Startdateofmybirthday.getFullYear();
+      console.log("Year:", year);
+
+      //gettig month and it is number 
+      const month = Startdateofmybirthday.getMonth();
+      console.log("Month (0-indexed):", month);
+
+      //Getting the hours
+      const hours = Startdateofmybirthday.getHours();
+      console.log("Hours (12-hour format):", hours);
+
+      //getting the mintues 
+      const minutes = Startdateofmybirthday.getMinutes();
+      console.log("Minutes:", minutes);
+
+      ("<br>");
+
+      //function method
+
+      //making up functions
+     // country_name = Australia
+      function Congratulations_to(your_name) {
+        return "We are wishing a very hearty birthday, " + your_name + "!";
+      }
+      console.log("1. Function Declaration:", Welcome("Alice"));
+
+      //representing the function
+      const multiply_xy = function (x, y) {
+        return x * y;
+      };
+      console.log("2. Function Expression:", multiply_xy(20,34));
+
+      // representing Arrow Function
+      const divide_ab = (a, b) => a / b;
+      console.log("Arrow Function:", divide_ab(1200, 2));
+    </script>
+  </body>
+</html>
