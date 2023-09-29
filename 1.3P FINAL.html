@@ -1,0 +1,52 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY PORTFOLIO</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><router-link to="/">Home</router-link></li>
+                <li><router-link to="/projects">Projects</router-link></li>
+                <li><router-link to="/contact">Contact</router-link></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <router-view></router-view>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Parth Makhija</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@3.0.11/dist/vue.global.prod.js"></script>
+    <script src="https://unpkg.com/vue-router@4.0.0/dist/vue-router.global.js"></script>
+    <script>
+        // Define your Vue components for each route
+        const Home = { template: '<div><h1>Parth Makhija</h1><p>Welcome to my portfolio website.</p></div>' };
+        const Projects = { template: '<div><h2>Projects</h2><div id="project-list"><div class="project"><h3>Projects</h3><p>I created all of my assignments with the help of the tasksheets provided which enabled me to understand the basic concepts of SIT120.</p></div></div></div>' };
+        const Contact = { template: '<div><h2>Contact Me at parthmakhija90@gmail.com</h2><form><label for="name">Name:</label><input type="text" id="name" v-model="name"><label for="email">Email:</label><input type="email" id="email" v-model="email"><textarea id="message" placeholder="Your message" v-model="message"></textarea><button type="submit">Send</button></form></div>' };
+
+        // Create a Vue Router instance and configure your routes
+        const router = VueRouter.createRouter({
+            history: VueRouter.createWebHashHistory(),
+            routes: [
+                { path: '/', component: Home },
+                { path: '/projects', component: Projects },
+                { path: '/contact', component: Contact },
+            ],
+        });
+
+        // Mount your Vue app with Vue Router
+        const app = Vue.createApp({});
+        app.use(router); // Use Vue Router
+        app.mount('body'); // Mount the app on the entire body element
+    </script>
+</body>
+</html>
